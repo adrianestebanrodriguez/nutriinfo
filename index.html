@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculadora de Tabla Nutricional</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Calculadora de Tabla Nutricional</h1>
+        <form id="nutrition-form">
+            <label for="ingredient">Ingrediente:</label>
+            <input type="text" id="ingredient" required list="ingredient-list">
+            <datalist id="ingredient-list">
+                <option value="Harina de maíz">
+                <option value="Carne de cerdo">
+                <option value="Zanahoria">
+                <option value="Papa">
+                <option value="Huevo">
+                <option value="Guisantes">
+                <option value="Aceite vegetal">
+                <option value="Sal">
+                <option value="Condimentos">
+            </datalist>
+
+            <label for="quantity">Cantidad (g):</label>
+            <input type="number" id="quantity" required>
+
+            <button type="button" id="add-ingredient">Agregar</button>
+        </form>
+
+        <label for="portion-size">Tamaño de la porción (g):</label>
+        <input type="number" id="portion-size" required value="250">
+
+        <table id="ingredient-table">
+            <thead>
+                <tr>
+                    <th>Ingrediente</th>
+                    <th>Cantidad (g)</th>
+                    <th>Eliminar</th>
+                </tr>
+            </thead>
+            <tbody></tbody>
+        </table>
+
+        <button id="calculate-nutrition">Calcular Tabla Nutricional</button>
+
+        <div id="nutrition-table"></div>
+        <div id="warning-labels"></div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
